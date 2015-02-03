@@ -21,3 +21,7 @@ footer {
 .footer-nav-spacer {
     margin-bottom: 50px;
 }
+
+.article .well .post-content {
+    overflow-x: hidden;
+}
