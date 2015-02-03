@@ -12,4 +12,8 @@ CHANGELOG gynter.github.io web page
 - Use analytics.kits.ee for web statistics;
 - Customize top navigation;
 - Add 'Hello world' post;
-- Add 'About me' and 'Projects' pages.
+- Add 'About me' and 'Projects' pages;
+- Fix link and TOC in README;
+- Fix RSS feeds permalinks;
+- Don't allow images to overflow post borders;
+- Add post: ANSI Select Graphic Rendition in Python.
