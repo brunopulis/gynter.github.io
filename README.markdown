@@ -3,10 +3,10 @@ gynter.github.io - Homepage of Günter Kits
 ========================================================================
 ------------------------------------------------------------------------
 
-1.	Description
-2.  License
-3.  Support
-4.  Author
+1. Description
+2. License
+3. Support
+4. Author
 
 1. Description
 --------------
