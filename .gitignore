@@ -1,0 +1,23 @@
+# Jekyll specific.
+.sass-cache
+_site/*
+Gemfile
+Gemfile.lock
+
+# Github related.
+CNAME
+
+# Other.
+*.orig
+*.core
+*.rej
+*~
+*.swp
+*.log
+*.tmp
+*.bak
+.*\#.*\#$
+
+# OS garbage.
+Thumbs.db
+.DS_Store

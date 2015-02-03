@@ -1,0 +1,88 @@
+# gynter.github.io - Homepage of Günter Kits
+
+# For Jekyll configuration options please see 
+# http://jekyllrb.com/docs/configuration/
+
+# Paths.
+data_source:    ./_data
+collections:    null
+
+# Handling reading.
+exclude:
+  - .gitignore
+  - .sass-cache
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE.md
+encoding:       utf-8
+markdown_ext:   markdown,mkdown,mkdn,mkd,md
+textile_ext:    textile
+
+# Content handling.
+show_drafts:    null
+lsi:            false
+limit_posts:    0
+future:         true
+markdown:       kramdown
+highlighter:    pygments
+
+# Serving.
+detach:     false
+port:       4000
+host:       127.0.0.1
+baseurl:    ""
+url:        "http://kyber.kits.ee"
+
+# Outputting.
+permalink:      pretty
+paginate:       10
+paginate_path:  page:num
+timezone:       UTC
+
+# Posts' and pages' defaults.
+defaults:
+  -
+    # This is the global scope (global defaults). All values here can
+    # be overridden in specific post or page.
+    scope:
+      path: ""
+    values:
+      # Page title prefix.
+      title_prefix: kyber
+      # Page title.
+      title: Home
+      # Short description of the page.
+      description: Günter's homepage
+      # Author for pages and posts.
+      author: "Günter Kits"
+      # Contact e-mail for pages and posts.
+      email: kyber@kits.ee
+      # Page/post content license (can contain HTML).
+      content_license: This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      # Preferred feed standard. Possible values are: atom, rss or null.
+      # If set to null then no feed links are present, but feeds can
+      # still be accessed directly via /feed/atom or /feed/rss.
+      feed: rss2
+      # Path to icon for feed (Atom standard only).
+      feed_icon: null
+      # Path to logo for feed (recommended w/h aspect ratio is 2:1).
+      feed_logo: null
+      # How many posts will be shown in the feed.
+      feed_posts_limit: 10
+      # Summary length in characters for posts.
+      summary_length: 500
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: posts
+  -
+    scope:
+      path: ""
+      type: pages
+    values:
+      layout: pages

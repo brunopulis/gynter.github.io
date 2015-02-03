@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="article">
+    <div class="well well-sm">
+        <h4>
+            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a><br />
+            <small>
+                {{ page.date | date: "%B %-d, %Y" }}
+                {% if page.tags != empty %} | Tags: {% for tag in page.tags %}<a href="{{ '-ref' | prepend: tag | replace: ' ','-' | prepend: '/tags/#' | prepend: site.baseurl }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}
+            </small>
+        </h4>
+        <div class="post-content">
+        {{ content }}
+        </div>
+    </div>
+</div>
+
+<ul class="pager">
+  {% if page.next %}
+    <li class="previous"><a class="btn btn-default" href="{{ page.next.url | prepend: site.baseurl }}"><i class="fa fa-arrow-left fa-lg"></i></a></li>
+  {% else %}
+    <li class="previous disabled"><a><i class="fa fa-arrow-left fa-lg"></i></a></li>
+  {% endif %}
+  {% if page.previous %}
+    <li class="next"><a class="btn btn-default" href="{{ page.previous.url | prepend: site.baseurl }}"><i class="fa fa-arrow-right fa-lg"></i></a></li>
+  {% else %}
+    <li class="next disabled"><a><i class="fa fa-arrow-right fa-lg"></i></a></li>
+  {% endif %}
+</ul>
