@@ -19,4 +19,6 @@ CHANGELOG gynter.github.io web page
 - Add post: ANSI Select Graphic Rendition in Python;
 - Minify HTML and CSS;
 - Combine CSS;
-- Fix query strings in CSS.
+- Fix query strings in CSS;
+- Fix minified CSS;
+- Minify JavaScript.
