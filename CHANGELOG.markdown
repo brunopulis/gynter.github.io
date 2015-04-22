@@ -21,4 +21,5 @@ CHANGELOG gynter.github.io web page
 - Combine CSS;
 - Fix query strings in CSS;
 - Fix minified CSS;
-- Minify JavaScript.
+- Minify JavaScript;
+- Remove newline from end of minified CSS and JavaScript files.
