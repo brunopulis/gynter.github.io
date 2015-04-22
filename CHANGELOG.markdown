@@ -16,4 +16,7 @@ CHANGELOG gynter.github.io web page
 - Fix link and TOC in README;
 - Fix RSS feeds permalinks;
 - Don't allow images to overflow post borders;
-- Add post: ANSI Select Graphic Rendition in Python.
+- Add post: ANSI Select Graphic Rendition in Python;
+- Minify HTML and CSS;
+- Combine CSS;
+- Fix query strings in CSS.

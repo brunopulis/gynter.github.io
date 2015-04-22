@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>{{ page.title_prefix }} - {{ page.title }}</title>
-{% if page.description %}    <meta name="description" content="{{ page.description }}">{% endif %}
-    <meta name="author" content="{{ page.author }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ '/assets/css/font-awesome.min.css'  | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ '/assets/css/pygments_default.min.css' | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | prepend: site.baseurl }}">
-    <script type="text/javascript" src="{{ '/assets/js/jquery.min.js' | prepend: site.baseurl }}"></script>
-    <script type="text/javascript" src="{{ '/assets/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
-{% if page.feed == 'rss2' %}    <link rel="alternate" type="application/rss+xml" title="{{ page.title_prefix }} RSS feed" href="{{ '/feed/rss2/' | prepend: site.baseurl }}">
-{% elsif page.feed == 'atom' %}    <link rel="alternate" type="application/atom+xml" title="{{ page.title_prefix }} Atom feed" href="{{ '/feed/atom/' | prepend: site.baseurl }}" />{% endif %}
+<meta charset="utf-8">
+<title>{{ page.title_prefix }} - {{ page.title }}</title>
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+<meta name="author" content="{{ page.author }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="{{ '/assets/css/style.min.css' | prepend: site.baseurl }}">
+{% if page.feed == 'rss2' %}<link rel="alternate" type="application/rss+xml" title="{{ page.title_prefix }} RSS feed" href="{{ '/feed/rss2/' | prepend: site.baseurl }}">
+{% elsif page.feed == 'atom' %}<link rel="alternate" type="application/atom+xml" title="{{ page.title_prefix }} Atom feed" href="{{ '/feed/atom/' | prepend: site.baseurl }}" />{% endif %}
 </head>
-
 <body id="pagetop">
-    {% include navbar.html %}
-    <div class="container">
-        <div class="col-md-3 hidden-xs">
-            {% include panel.html %}
-        </div>
-        <div class="col-md-7">
-            {{ content }}
-        </div>
-    </div>
-    <div class="navbar navbar-fixed-bottom navbar-inverse navbar-header visible-xs-block">
-        <a class="navbar-toggle" href="#pagetop"><i class="fa fa-arrow-up fa-lg"></i></a>
-        <a class="navbar-toggle" href="{{ '/' | prepend: page.feed | prepend: '/feed/' | prepend: site.baseurl }}"><i class="fa fa-rss fa-lg"></i></a>
-{% if site.categories != empty %}        <a class="navbar-toggle" href="{{ '/categories/' | prepend: site.baseurl }}"><i class="fa fa-folder-open fa-lg"></i></a>{% endif %}
-{% if site.tags != empty %}        <a class="navbar-toggle" href="{{ '/tags/' | prepend: site.baseurl }}"><i class="fa fa-tags fa-lg"></i></a>{% endif %}
-{% if site.posts != empty %}        <a class="navbar-toggle" href="{{ '/archive/' | prepend: site.baseurl }}"><i class="fa fa-archive fa-lg"></i></a>{% endif %}
-    </div>
-    <footer class="navbar-inverse">
-        <p>&copy; {{ site.time | date: '%Y' }} {{ page.content_license }}</p>
-    </footer>
-    <div class="footer-nav-spacer visible-xs-block"></div>
-
-    <!-- Piwik -->
-    <script type="text/javascript">
-        var _paq = _paq || [];
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-            var u=(("https:" == document.location.protocol) ? "https://analytics.kits.ee/" : "http://analytics.kits.ee/");
-            _paq.push(['setTrackerUrl', u+'piwik.php']);
-            _paq.push(['setSiteId', 1]);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-        })();
-    </script>
-    <noscript><p><img src="http://analytics.kits.ee/piwik.php?idsite=1&rec=1" style="border:0" alt="" /></p></noscript>
-    <!-- End Piwik Code -->
+{% include navbar.html %}
+<div class="container">
+<div class="col-md-3 hidden-xs">
+{% include panel.html %}
+</div>
+<div class="col-md-7">
+{{ content }}
+</div>
+</div>
+<div class="navbar navbar-fixed-bottom navbar-inverse navbar-header visible-xs-block">
+<a class="navbar-toggle" href="#pagetop"><i class="fa fa-arrow-up fa-lg"></i></a>
+<a class="navbar-toggle" href="{{ '/' | prepend: page.feed | prepend: '/feed/' | prepend: site.baseurl }}"><i class="fa fa-rss fa-lg"></i></a>
+{% if site.categories != empty %}<a class="navbar-toggle" href="{{ '/categories/' | prepend: site.baseurl }}"><i class="fa fa-folder-open fa-lg"></i></a>{% endif %}
+{% if site.tags != empty %}<a class="navbar-toggle" href="{{ '/tags/' | prepend: site.baseurl }}"><i class="fa fa-tags fa-lg"></i></a>{% endif %}
+{% if site.posts != empty %}<a class="navbar-toggle" href="{{ '/archive/' | prepend: site.baseurl }}"><i class="fa fa-archive fa-lg"></i></a>{% endif %}
+</div>
+<footer class="navbar-inverse">
+<p>&copy; {{ site.time | date: '%Y' }} {{ page.content_license }}</p>
+</footer>
+<div class="footer-nav-spacer visible-xs-block"></div>
+<!-- Piwik -->
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+var u=(("https:" == document.location.protocol) ? "https://analytics.kits.ee/" : "http://analytics.kits.ee/");
+_paq.push(['setTrackerUrl', u+'piwik.php']);
+_paq.push(['setSiteId', 1]);
+var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+})();
+</script>
+<noscript><p><img src="http://analytics.kits.ee/piwik.php?idsite=1&rec=1" style="border:0" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+<script type="text/javascript" src="{{ '/assets/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
 </body>
 </html>
