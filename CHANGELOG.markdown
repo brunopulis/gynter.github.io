@@ -22,4 +22,6 @@ CHANGELOG gynter.github.io web page
 - Fix query strings in CSS;
 - Fix minified CSS;
 - Minify JavaScript;
-- Remove newline from end of minified CSS and JavaScript files.
+- Remove newline from end of minified CSS and JavaScript files;
+- Fix the title;
+- Add HTML5 Shiv as local resource.

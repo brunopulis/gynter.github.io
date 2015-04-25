@@ -51,7 +51,7 @@ defaults:
       path: ""
     values:
       # Page title prefix.
-      title_prefix: kyber
+      title_prefix: kyberkits
       # Page title.
       title: Home
       # Short description of the page.
