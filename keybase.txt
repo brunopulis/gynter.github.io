@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/gynter
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://kyber.kits.ee
+  * I am gynter (https://keybase.io/gynter) on keybase.
+  * I have a public key with fingerprint E420 F29F 1152 902E B51B  E42B C6C0 8ACB 9F84 326D
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "e420f29f1152902eb51be42bc6c08acb9f84326d",
+            "host": "keybase.io",
+            "key_id": "c6c08acb9f84326d",
+            "kid": "0101ee7954dcd37367e09ec9d0d17ea09e1568c6a5f7a43a71ad9b53e1d989d976690a",
+            "uid": "4c0028eab89d2021bf4d926c341f0a19",
+            "username": "gynter"
+        },
+        "service": {
+            "hostname": "kyber.kits.ee",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1434716832,
+    "expire_in": 157680000,
+    "prev": "c90032724b139abf60c1221ff9d6bbb05e26acf79f4fe9e8673ce43de4c62696",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFtUmtQVFUcX1gXaCMiZwLCBmYu1AzIwn3tfSCxTQkaKoGPkpCWe+49F64Ld5e7
+u8C6EJprzpKKY/jIogc5YkjxIaFIMEFMm7TJYbBRfFAJghAw7hAxWHYvY986X845
+v9c5///89z+h1xmDCm6Xp1nf7I4L+nEc6Db5jCe8CLALHiTdi9jg4iZKcglUHIok
+u5B0BJI4KuKsiGFmnEVxCMwYUDHAUzzKcDxgRYYkcEpAUpBSu1NzqDGAc8JUya5i
+6sUqCSr6P3rbIoFiKAYhzZpJgRcImqBoiLKQZwVUwGjIqWfMTDE8xZlFmiMJjsY4
+gQVmAmICy7ACS1MUi3JqnHsxjuRRFGcgB1QOR3EMiKTA4hRPkJiIchirCZ1Qkbly
+qKpLPLILKkhtCqJilRIPtQZodTzibR4AlVSb5HKmQqhaHYrdZeftZSpV6nI50jWn
+y+PQpFUQWB+FWIEkC2oXVUMlVJySXUbSMVXJuyQtFSMJksYohsBTEFjtkBRolTSF
+maYYVF3aM7BS6xmLogRO4yTACJYDIoXyGI5josgKFAAANUOc4niRZkVShCxkKJrg
+IUkIkOQpnGIpRCurQrYj6aT6Ta5EjXRKJTLncisQqTXq/MHPLtEFGXUhhmBtEnTG
+xyL/G4+lEZE6/0F0VTk5OTaz/4eYGlO8IeqhcnSmb4FIjluSu+9B4frry7r7YItp
+553DBd1Jh8qrboTLY9bZZ5Yf7xHjit17HIOZfbtjvyvv7rgUMg1frzeH1xBTZyyx
+0/6p0wdq5DUGW2zP1jDEQm5KzYht3qs05935oqHFdDe0xd1YE72lY6zo9r3rX+o7
+rrivXL7U2O/NNSR0dE4fxy8ey4gc3dfTcDWA8v49Y2+0nu20IIW/D7dNbI9bWf1x
+U8gvF55+6eGOV14Ls7zVunFz66rQc/MFZP3qE/bAsVb+ef0GfeDX+F3jpsN9yIK+
+vTnL9dQnP53yvjpH+BJXdPrTwM+zj49s++rIjcQ2j3+gvm7gz+VUrj/5CBIcNNh7
+8G51TlfjC9mGUzs+1cPc4bne0cGcmXezu84l5NtGbz7ny3jxD6ZtJsK/0N4bnrCz
++qwUQMzf+41zy4STrWdoZu9QdkjdxlDpnfnBYtu2pJGItz/7YKvv5bybI6WgP+bJ
+wN+JhsS890ejCzMn+c/zG5Ks7qiuMqRoF3BnDVHrvd9m/XPLMnV+5ZAu6nRYhfLh
+12uJDQ88lhVFDl9TRMbRAcNv5y/ai6smszb3X86/lrl9918xs23tH018Y8n3lF5D
+E6vlGnkL74sue+9qwnz8+P1hU07RvaWBk+v6VscZ1jbdmr5fkTZxYV0d1245VJv8
+Lw==
+=uJuZ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/gynter
+
+==================================================================
