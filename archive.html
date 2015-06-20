@@ -2,13 +2,14 @@
 layout: page
 title: Posts archive
 ---
+
 {% for post in site.posts %}
-{% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
-{% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
-{% if month != nmonth %}
-<h4><span class="fa fa-archive fa-lg"></span> {{ post.date | date: '%B %Y' }}</h4>
-<ul class="list-unstyled">
-{% if forloop.index != 1 %}</ul>{% endif %}
-{% endif %}
-<li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> - {{ post.date | date: "%B %-d, %Y" }}</li>
+    {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+    {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+    {% if month != nmonth %}
+        {% if forloop.index != 1 %}</ul><hr />{% endif %}
+        <h4><span class="fa fa-archive fa-lg"></span> {{ post.date | date: '%B %Y' }}</h4>
+        <ul class="list-unstyled">
+    {% endif %}
+    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> - {{ post.date | date: "%B %-d, %Y" }}</li>
 {% endfor %}

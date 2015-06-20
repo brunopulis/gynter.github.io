@@ -15,6 +15,10 @@ gynter.github.io provides a simple responsive Jekyll template using
 Bootstrap, jQuery and Font Awesome. It also contains the content of my 
 homepage <http://kyber.kits.ee>.
 
+It is based on a work "Simplex" created by Thomas Park 
+<hello@thomaspark.co> and "Bootstrap 3 Affix Sidebar" created by Carol 
+Skelly at Bootply.com.
+
 The Jekyll configuration is defined and documented in `_config.yml`. 
 Some parts of the web like navigation menu (`_includes/navbar.html`) 
 are hardcoded into the template.

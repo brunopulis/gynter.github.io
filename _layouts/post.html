@@ -1,29 +1,34 @@
 ---
 layout: default
 ---
-<div class="article">
-<div class="well well-sm">
-<h4>
-<a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a><br />
-<small>
-{{ page.date | date: "%B %-d, %Y" }}
-{% if page.tags != empty %} | Tags: {% for tag in page.tags %}<a href="{{ '-ref' | prepend: tag | replace: ' ','-' | prepend: '/tags/#' | prepend: site.baseurl }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}
-</small>
-</h4>
+
+<hr class="heading-divider" />
+<h3 class="text-center">
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ page.title }}</a><br />
+    <small>
+        {{ page.date | date: "%B %-d, %Y" }}
+        {% if page.tags != empty %}<br />
+            <i class="fa fa-tags"></i>
+            {% for tag in page.tags %}
+                <a href="{{ '-ref' | prepend: tag | replace: ' ','-' | prepend: '/tags/#' | prepend: site.baseurl }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+        {% endif %}
+    </small>
+</h3>
+<hr class="heading-divider" />
 <div class="post-content">
-{{ content }}
+    {{ content }}
 </div>
-</div>
-</div>
+
 <ul class="pager">
-{% if page.next %}
-<li class="previous"><a class="btn btn-default" href="{{ page.next.url | prepend: site.baseurl }}"><i class="fa fa-arrow-left fa-lg"></i></a></li>
-{% else %}
-<li class="previous disabled"><a><i class="fa fa-arrow-left fa-lg"></i></a></li>
-{% endif %}
-{% if page.previous %}
-<li class="next"><a class="btn btn-default" href="{{ page.previous.url | prepend: site.baseurl }}"><i class="fa fa-arrow-right fa-lg"></i></a></li>
-{% else %}
-<li class="next disabled"><a><i class="fa fa-arrow-right fa-lg"></i></a></li>
-{% endif %}
+    {% if page.next %}
+        <li class="previous"><a class="fa fa-chevron-left" href="{{ page.next.url | prepend: site.baseurl }}"></a></li>
+    {% else %}
+        <li class="previous disabled"><a class="fa fa-chevron-left"></a></li>
+    {% endif %}
+    {% if page.previous %}
+        <li class="next"><a class="fa fa-chevron-right" href="{{ page.previous.url | prepend: site.baseurl }}"></a></li>
+    {% else %}
+        <li class="next disabled"><a class="fa fa-chevron-right"></a></li>
+    {% endif %}
 </ul>

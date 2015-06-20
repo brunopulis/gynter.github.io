@@ -5,9 +5,8 @@ date: 2015-02-03 20:00:00
 tags:
 - python
 - ansi sgr
-- terminal
-- style
-- color
+- terminal style
+- terminal color
 ---
 
 ![ANSI SGR in Python]({{site.baseurl}}/media/posts/2015/ansi_sgr.png)

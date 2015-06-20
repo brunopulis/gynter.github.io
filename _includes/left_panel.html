@@ -1,0 +1,33 @@
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_words = site_tags | split:',' | sort %}
+
+<div class="col-md-3 visible-md visible-lg" id="left-panel">
+    <div class="container">
+        <div class="row" id="sidebar">
+            {% if site.posts != empty %}
+                <p>
+                    <ul class="nav nav-stacked">
+                        {% for post in site.posts limit: 5 %}
+                            <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                        <li><a href="{{ '/archive/' | prepend: site.baseurl }}">Posts archive</a></li>
+                    </ul>
+                </p>
+            {% endif %}
+            {% if site.tags != empty %}
+                <p>
+                    <ul class="list-inline">
+                    {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+                        {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+                        <li>
+                            <a href="{{ '-ref' | prepend: this_word | replace: ' ','-' | prepend: '/tags/#' | prepend: site.baseurl }}">
+                                <span class="badge">{{ this_word }} <sup>{{ site.tags[this_word].size }}</sup></span>
+                            </a>
+                        </li>
+                    {% endunless %}{% endfor %}
+                    </ul>
+                </p>
+            {% endif %}
+        </div>
+    </div>
+</div>

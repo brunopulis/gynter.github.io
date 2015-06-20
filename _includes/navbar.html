@@ -1,22 +1,24 @@
-<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-<div class="container-fluid">
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav" aria-expanded="false" aria-controls="nav">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-<a class="navbar-brand" href="{{ '/' | prepend: site.baseurl }}">{{ page.title_prefix }}</a>
-</div>
-<div class="collapse navbar-collapse" id="nav">
-<ul class="nav navbar-nav">
-<li><a href="{{ '/about/' | prepend: site.baseurl }}">About me</a></li>
-<li><a href="{{ '/projects/' | prepend: site.baseurl }}">Projects</a></li>
-</ul>
-<ul class="nav navbar-nav navbar-right hidden-xs">
-<li><a target="_blank" href="{{ '/' | prepend: page.feed | prepend: '/feed/' | prepend: site.baseurl }}"><i class="fa fa-rss"></i></a></li>
-</ul>
-</div>
-</div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav" aria-expanded="false" aria-controls="nav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ '/' | prepend: site.baseurl }}">#!</a>
+            <a class="navbar-brand visible-xs" data-toggle="collapse" data-target="#about" style="cursor: pointer;">Who am I ?</a></li>
+        </div>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ '/about/' | prepend: site.baseurl }}">About me</a></li>
+                <li><a href="{{ '/projects/' | prepend: site.baseurl }}">Projects</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li><a data-toggle="collapse" data-target="#about" style="cursor: pointer;">Who am I ?</a></li>
+                <li><a class="fa fa-rss" target="_blank" href="{{ '/' | prepend: page.feed | prepend: '/feed/' | prepend: site.baseurl }}"></a></li>
+            </ul>
+        </div>
+    </div>
 </nav>

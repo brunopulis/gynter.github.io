@@ -3,14 +3,19 @@ gynter.github.io web page License
 ========================================================================
 ------------------------------------------------------------------------
 
+This work is created by Günter Kits <kyber@kits.ee>.
+
+It is based on a work "Simplex" created by Thomas Park 
+<hello@thomaspark.co> and "Bootstrap 3 Affix Sidebar" created by Carol 
+Skelly at Bootply.com.
+
 Copyright (c) 2015 Günter Kits
 
-This product is distributed under the Expat License. Please read
-through the paragraph "Expat License" for more information about our
-license.
+This work is distributed under the Expat License. Please read through 
+the paragraph "Expat License" for more information about our license.
 
-The content which is distributed with this product and is located in 
-the directories "media", "pages", "_posts" and/or in one or more 
+The content which is distributed with this work and is located in the 
+directories "media", "pages", "_posts" and/or in one or more 
 subdirectories under those directories is licensed under a Creative 
 Commons Attribution-ShareAlike 4.0 International Public License, if not 
 specified otherwise in the content or content metadata. Please read 

@@ -5,7 +5,9 @@
 
 # Paths.
 data_source:    ./_data
-collections:    null
+collections:
+  projects:
+    output: false
 
 # Handling reading.
 exclude:
@@ -37,10 +39,11 @@ baseurl:    ""
 url:        "http://kyber.kits.ee"
 
 # Outputting.
-permalink:      pretty
-paginate:       10
-paginate_path:  page:num
-timezone:       UTC
+permalink:          pretty
+paginate:           3
+paginate_path:      page:num
+paginator_offset:   2
+timezone:           UTC
 
 # Posts' and pages' defaults.
 defaults:
@@ -72,17 +75,15 @@ defaults:
       feed_logo: null
       # How many posts will be shown in the feed.
       feed_posts_limit: 10
-      # Summary length in characters for posts.
-      summary_length: 500
   -
     scope:
       path: ""
       type: posts
     values:
-      layout: posts
+      layout: post
   -
     scope:
       path: ""
       type: pages
     values:
-      layout: pages
+      layout: page

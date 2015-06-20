@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
-<div class="well well-sm">
-{{ content }}
+
+<hr class="heading-divider" />
+<h3 class="text-center">
+    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a><br />
+</h3>
+<hr class="heading-divider" />
+<div class="page-content">
+    {{ content }}
 </div>
