@@ -1,0 +1,141 @@
+/*
+A Bootstrap 3.1 affix sidebar template
+from http://bootply.com
+
+This CSS code should follow the 'bootstrap.css'
+in your HTML file.
+#be0000
+license: MIT
+author: bootply.com
+*/
+
+body {
+    padding-top: 50px;
+}
+
+#masthead {
+    background: url('../images/top.jpg') repeat-x top center;
+    min-height: 250px;
+}
+
+#masthead h1 {
+    font-size: 30px;
+    line-height: 1;
+    padding-top: 80px;
+}
+
+#masthead h1 a {
+    color: #444444;
+}
+
+#masthead h1 a:hover {
+    text-decoration: none;
+    color: #d9230f;
+}
+
+#masthead .panel {
+    margin-top: 5%;
+}
+
+@media screen and (min-width: 768px) {
+    #masthead h1 {
+        font-size: 50px;
+    }
+}
+
+.navbar-bright {
+    background-color: #111155;
+    color: #fff;
+}
+
+.affix-top,.affix{
+    position: static;
+}
+
+.list-unstyled .label {
+    margin-bottom: 2px;
+    min-width: 35px;
+}
+
+@media (min-width: 979px) {
+    #sidebar {
+        width: 230px;
+    }
+
+    #sidebar.affix-top {
+        position: static;
+        width: 230px;
+    }
+
+    #sidebar.affix {
+        position: fixed;
+        top: 70px;
+        width: 230px;
+    }
+}
+
+#sidebar .nav li.active {
+    border: 0 #d9230f solid;
+    border-right-width: 5px;
+}
+
+#sidebar .nav li:before {
+    position: absolute;
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: inherit;
+    color: #d9230f;
+    content: "\f054";
+    top: 26%;
+}
+
+.heading-divider {
+    border-color: #d9230f;
+}
+
+.page-content,
+.post-content {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.page-content p,
+.post-content p {
+    overflow: hidden;
+}
+
+footer {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 837px) {
+    footer {
+        margin-bottom: 70px;
+    }
+}
+
+.navbar-collapse .nav > .responsive-divider {
+    height: 30px;
+    margin: 5px 9px;
+    border-left: 1px solid #d9230f;
+}
+
+.navbar-inverse .responsive-divider {
+    border-left-color: #2e2f2f;
+}
+
+
+@media (max-width: 767px) {
+    .navbar-collapse .nav > .responsive-divider {
+        height: 1px;
+        margin: 5px 9px;
+        border-top: 1px solid #d9230f;
+    }
+
+    .navbar-inverse .responsive-divider {
+        border-top-color: #2e2f2f;
+    }
+}
+

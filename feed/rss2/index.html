@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>kyberkits</title>
+        <description></description>
+
+        <copyright><![CDATA[]]></copyright>
+        <lastBuildDate>Tue, 23 Jun 2015 15:22:42 +0000</lastBuildDate>
+        <pubDate>Tue, 23 Jun 2015 15:22:42 +0000</pubDate>
+
+        <link>http://kyber.kits.ee/</link>
+        <atom:link href="http://kyber.kits.ee/feed/rss/" rel="self" type="application/rss+xml" />
+
+        <generator>Jekyll 2.4.0</generator>
+
+        <item>
+            <title>ANSI Select Graphic Rendition in Python</title>
+            <pubDate>Tue, 03 Feb 2015 20:00:00 +0000</pubDate>
+
+            <link>http://kyber.kits.ee/2015/02/03/ansi-sgr-in-python/</link>
+            <guid isPermaLink="true">http://kyber.kits.ee/2015/02/03/ansi-sgr-in-python/</guid>
+
+            <author>kyber@kits.ee (Günter Kits)</author>
+
+
+            <category><![CDATA[python]]></category>
+            <category><![CDATA[ansi sgr]]></category>
+            <category><![CDATA[terminal style]]></category>
+            <category><![CDATA[terminal color]]></category>
+
+            <description><![CDATA[<p><img src="/media/posts/2015/ansi_sgr.png" alt="ANSI SGR in Python" /></p>
+
+<p>The code in <a href="https://gist.github.com/gynter/9233704">this gist</a> gives an easy way to use <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#graphics">ANSI SGR 
+parameters</a> in terminal using Python.</p>
+
+<p>The code is lightweight and thou it also already has an example I’ll 
+explain a bit more how to use it.</p>
+
+<hr />
+
+<h4 id="examples">Examples</h4>
+
+<p>First we need to import the module:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">ansi_sgr</span> <span class="kn">import</span> <span class="o">*</span></code></pre></div>
+
+<p>The example below prints all defined SGR codes as their corresponding 
+styles (RED as red, and BOLD as bold):</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">CODE_MAP</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">code</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">ftt</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span></code></pre></div>
+
+<p>This example combines multiple SGR codes and produces yellow bold text 
+on green background:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span> <span class="n">ftt</span><span class="p">(</span><span class="s">&#39;Yellow bold text on green background&#39;</span><span class="p">,</span> <span class="s">&#39;YELLOW&#39;</span><span class="p">,</span> <span class="s">&#39;BOLD&#39;</span><span class="p">,</span> <span class="s">&#39;BG-GREEN&#39;</span><span class="p">)</span></code></pre></div>
+
+<p>Also, the order is irrelevant, the code below gives same result as the 
+code above:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span> <span class="n">ftt</span><span class="p">(</span><span class="s">&#39;The order is irrelevant&#39;</span><span class="p">,</span> <span class="s">&#39;BG-GREEN&#39;</span><span class="p">,</span> <span class="s">&#39;YELLOW&#39;</span><span class="p">,</span> <span class="s">&#39;BOLD&#39;</span><span class="p">)</span></code></pre></div>
+
+<p>The last code of same type takes precedence:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span> <span class="n">ftt</span><span class="p">(</span><span class="s">&quot;As long as same type of style isn&#39;t overwritten&quot;</span><span class="p">,</span> <span class="s">&#39;BG-GREEN&#39;</span><span class="p">,</span> <span class="s">&#39;YELLOW&#39;</span><span class="p">,</span> <span class="s">&#39;BOLD&#39;</span><span class="p">,</span> <span class="s">&#39;BG-RED&#39;</span><span class="p">)</span></code></pre></div>
+
+]]></description>
+        </item>
+
+        <item>
+            <title>Tere maailm!</title>
+            <pubDate>Thu, 01 Jan 1970 00:00:01 +0000</pubDate>
+
+            <link>http://kyber.kits.ee/1970/01/01/tere-maailm/</link>
+            <guid isPermaLink="true">http://kyber.kits.ee/1970/01/01/tere-maailm/</guid>
+
+            <author>kyber@kits.ee (Günter Kits)</author>
+
+
+            <category><![CDATA[hello world]]></category>
+            <category><![CDATA[python]]></category>
+
+            <description><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed 
+efficitur ligula. Pellentesque ex nunc, pellentesque sit amet enim vel, 
+auctor placerat lectus. Nullam a imperdiet dolor. Aenean tempor massa 
+at ligula mollis ullamcorper. Curabitur porttitor, nisl in lacinia 
+facilisis, nisl urna mattis enim, nec consequat purus est et nibh. </p>
+
+<blockquote>
+  <p>Integer at congue mauris. Phasellus lacus mauris, ornare nec aliquet 
+ut, dictum non nunc. Duis sed nisi eget risus facilisis facilisis eu 
+at leo. Ut dui ipsum, aliquam vitae mi eget, tincidunt rutrum nulla. 
+Phasellus sit amet eleifend quam, non dapibus nisi. Praesent nec 
+magna sit amet sapien mattis bibendum. Sed lobortis faucibus turpis 
+vitae tempus. Etiam at quam elit. Fusce ut dui iaculis, maximus 
+mauris blandit, vulputate ex. Interdum et malesuada fames ac ante 
+ipsum primis in faucibus. Phasellus volutpat turpis non elementum 
+egestas.</p>
+</blockquote>
+
+<h2 id="tere-pythoni-maailm">Tere Python’i maailm</h2>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&quot;tere&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">])</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">hello</span><span class="p">(</span><span class="s">&quot;maailm!&quot;</span><span class="p">)</span></code></pre></div>
+
+]]></description>
+        </item>
+
+        <item>
+            <title>Hello World!</title>
+            <pubDate>Thu, 01 Jan 1970 00:00:01 +0000</pubDate>
+
+            <link>http://kyber.kits.ee/1970/01/01/hello-world/</link>
+            <guid isPermaLink="true">http://kyber.kits.ee/1970/01/01/hello-world/</guid>
+
+            <author>kyber@kits.ee (Günter Kits)</author>
+
+
+            <category><![CDATA[hello world]]></category>
+            <category><![CDATA[python]]></category>
+
+            <description><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed 
+efficitur ligula. Pellentesque ex nunc, pellentesque sit amet enim vel, 
+auctor placerat lectus. Nullam a imperdiet dolor. Aenean tempor massa 
+at ligula mollis ullamcorper. Curabitur porttitor, nisl in lacinia 
+facilisis, nisl urna mattis enim, nec consequat purus est et nibh. </p>
+
+<blockquote>
+  <p>Integer at congue mauris. Phasellus lacus mauris, ornare nec aliquet 
+ut, dictum non nunc. Duis sed nisi eget risus facilisis facilisis eu 
+at leo. Ut dui ipsum, aliquam vitae mi eget, tincidunt rutrum nulla. 
+Phasellus sit amet eleifend quam, non dapibus nisi. Praesent nec 
+magna sit amet sapien mattis bibendum. Sed lobortis faucibus turpis 
+vitae tempus. Etiam at quam elit. Fusce ut dui iaculis, maximus 
+mauris blandit, vulputate ex. Interdum et malesuada fames ac ante 
+ipsum primis in faucibus. Phasellus volutpat turpis non elementum 
+egestas.</p>
+</blockquote>
+
+<h2 id="hello-python-world">Hello Python World</h2>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&quot;hello&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">])</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">hello</span><span class="p">(</span><span class="s">&quot;world!&quot;</span><span class="p">)</span></code></pre></div>
+
+]]></description>
+        </item>
+
+    </channel>
+</rss>

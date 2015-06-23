@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title type="text">kyberkits</title>
+    <subtitle type="text"></subtitle>
+
+
+    <rights type="html"><![CDATA[]]></rights>
+    <updated>2015-06-23T15:22:42+00:00</updated>
+
+    <link rel="self" type="application/atom+xml" href="http://kyber.kits.ee/feed/atom/" />
+    <link rel="alternate" type="text/html" href="http://kyber.kits.ee/" />
+
+    <id>http://kyber.kits.ee/feed/atom/</id>
+    <generator uri="http://jekyllrb.com/" version="2.4.0">Jekyll</generator>
+
+    <entry>
+        <title type="html"><![CDATA[ANSI Select Graphic Rendition in Python]]></title>
+        <updated>2015-02-03T20:00:00+00:00</updated>
+        <published>2015-02-03T20:00:00+00:00</published>
+
+        <link rel="alternate" type="text/html" href="http://kyber.kits.ee/2015/02/03/ansi-sgr-in-python/" />
+
+        <id>http://kyber.kits.ee/2015/02/03/ansi-sgr-in-python/</id>
+
+        <author>
+            <name>Günter Kits</name>
+            <email>kyber@kits.ee</email>
+        </author>
+
+
+        <category term="python" />
+        <category term="ansi sgr" />
+        <category term="terminal style" />
+        <category term="terminal color" />
+
+        <summary type="text">
+
+The code in this gist gives an easy way to use ANSI SGR 
+parameters in terminal using Python.
+
+The code is lightweight and thou it also already has an example I’ll 
+explain a bit more how to use it.
+
+
+
+Examples
+
+First we need to import the module:
+
+from ansi_sgr import *
+
+The example below prin...</summary>
+		<content type="html" xml:base="http://kyber.kits.ee/2015/02/03/ansi-sgr-in-python/">
+            <![CDATA[<p><img src="/media/posts/2015/ansi_sgr.png" alt="ANSI SGR in Python" /></p>
+
+<p>The code in <a href="https://gist.github.com/gynter/9233704">this gist</a> gives an easy way to use <a href="https://en.wikipedia.org/wiki/ANSI_escape_code#graphics">ANSI SGR 
+parameters</a> in terminal using Python.</p>
+
+<p>The code is lightweight and thou it also already has an example I’ll 
+explain a bit more how to use it.</p>
+
+<hr />
+
+<h4 id="examples">Examples</h4>
+
+<p>First we need to import the module:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">ansi_sgr</span> <span class="kn">import</span> <span class="o">*</span></code></pre></div>
+
+<p>The example below prints all defined SGR codes as their corresponding 
+styles (RED as red, and BOLD as bold):</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">code</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">CODE_MAP</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">code</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">ftt</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span></code></pre></div>
+
+<p>This example combines multiple SGR codes and produces yellow bold text 
+on green background:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span> <span class="n">ftt</span><span class="p">(</span><span class="s">&#39;Yellow bold text on green background&#39;</span><span class="p">,</span> <span class="s">&#39;YELLOW&#39;</span><span class="p">,</span> <span class="s">&#39;BOLD&#39;</span><span class="p">,</span> <span class="s">&#39;BG-GREEN&#39;</span><span class="p">)</span></code></pre></div>
+
+<p>Also, the order is irrelevant, the code below gives same result as the 
+code above:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span> <span class="n">ftt</span><span class="p">(</span><span class="s">&#39;The order is irrelevant&#39;</span><span class="p">,</span> <span class="s">&#39;BG-GREEN&#39;</span><span class="p">,</span> <span class="s">&#39;YELLOW&#39;</span><span class="p">,</span> <span class="s">&#39;BOLD&#39;</span><span class="p">)</span></code></pre></div>
+
+<p>The last code of same type takes precedence:</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">print</span> <span class="n">ftt</span><span class="p">(</span><span class="s">&quot;As long as same type of style isn&#39;t overwritten&quot;</span><span class="p">,</span> <span class="s">&#39;BG-GREEN&#39;</span><span class="p">,</span> <span class="s">&#39;YELLOW&#39;</span><span class="p">,</span> <span class="s">&#39;BOLD&#39;</span><span class="p">,</span> <span class="s">&#39;BG-RED&#39;</span><span class="p">)</span></code></pre></div>
+
+]]>
+		</content>
+    </entry>
+
+    <entry>
+        <title type="html"><![CDATA[Tere maailm!]]></title>
+        <updated>1970-01-01T00:00:01+00:00</updated>
+        <published>1970-01-01T00:00:01+00:00</published>
+
+        <link rel="alternate" type="text/html" href="http://kyber.kits.ee/1970/01/01/tere-maailm/" />
+
+        <id>http://kyber.kits.ee/1970/01/01/tere-maailm/</id>
+
+        <author>
+            <name>Günter Kits</name>
+            <email>kyber@kits.ee</email>
+        </author>
+
+
+        <category term="hello world" />
+        <category term="python" />
+
+        <summary type="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed 
+efficitur ligula. Pellentesque ex nunc, pellentesque sit amet enim vel, 
+auctor placerat lectus. Nullam a imperdiet dolor. Aenean tempor massa 
+at ligula mollis ullamcorper. Curabitur porttitor, nisl in lacinia 
+facilisis, ni...</summary>
+		<content type="html" xml:base="http://kyber.kits.ee/1970/01/01/tere-maailm/">
+            <![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed 
+efficitur ligula. Pellentesque ex nunc, pellentesque sit amet enim vel, 
+auctor placerat lectus. Nullam a imperdiet dolor. Aenean tempor massa 
+at ligula mollis ullamcorper. Curabitur porttitor, nisl in lacinia 
+facilisis, nisl urna mattis enim, nec consequat purus est et nibh. </p>
+
+<blockquote>
+  <p>Integer at congue mauris. Phasellus lacus mauris, ornare nec aliquet 
+ut, dictum non nunc. Duis sed nisi eget risus facilisis facilisis eu 
+at leo. Ut dui ipsum, aliquam vitae mi eget, tincidunt rutrum nulla. 
+Phasellus sit amet eleifend quam, non dapibus nisi. Praesent nec 
+magna sit amet sapien mattis bibendum. Sed lobortis faucibus turpis 
+vitae tempus. Etiam at quam elit. Fusce ut dui iaculis, maximus 
+mauris blandit, vulputate ex. Interdum et malesuada fames ac ante 
+ipsum primis in faucibus. Phasellus volutpat turpis non elementum 
+egestas.</p>
+</blockquote>
+
+<h2 id="tere-pythoni-maailm">Tere Python’i maailm</h2>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&quot;tere&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">])</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">hello</span><span class="p">(</span><span class="s">&quot;maailm!&quot;</span><span class="p">)</span></code></pre></div>
+
+]]>
+		</content>
+    </entry>
+
+    <entry>
+        <title type="html"><![CDATA[Hello World!]]></title>
+        <updated>1970-01-01T00:00:01+00:00</updated>
+        <published>1970-01-01T00:00:01+00:00</published>
+
+        <link rel="alternate" type="text/html" href="http://kyber.kits.ee/1970/01/01/hello-world/" />
+
+        <id>http://kyber.kits.ee/1970/01/01/hello-world/</id>
+
+        <author>
+            <name>Günter Kits</name>
+            <email>kyber@kits.ee</email>
+        </author>
+
+
+        <category term="hello world" />
+        <category term="python" />
+
+        <summary type="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed 
+efficitur ligula. Pellentesque ex nunc, pellentesque sit amet enim vel, 
+auctor placerat lectus. Nullam a imperdiet dolor. Aenean tempor massa 
+at ligula mollis ullamcorper. Curabitur porttitor, nisl in lacinia 
+facilisis, ni...</summary>
+		<content type="html" xml:base="http://kyber.kits.ee/1970/01/01/hello-world/">
+            <![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed 
+efficitur ligula. Pellentesque ex nunc, pellentesque sit amet enim vel, 
+auctor placerat lectus. Nullam a imperdiet dolor. Aenean tempor massa 
+at ligula mollis ullamcorper. Curabitur porttitor, nisl in lacinia 
+facilisis, nisl urna mattis enim, nec consequat purus est et nibh. </p>
+
+<blockquote>
+  <p>Integer at congue mauris. Phasellus lacus mauris, ornare nec aliquet 
+ut, dictum non nunc. Duis sed nisi eget risus facilisis facilisis eu 
+at leo. Ut dui ipsum, aliquam vitae mi eget, tincidunt rutrum nulla. 
+Phasellus sit amet eleifend quam, non dapibus nisi. Praesent nec 
+magna sit amet sapien mattis bibendum. Sed lobortis faucibus turpis 
+vitae tempus. Etiam at quam elit. Fusce ut dui iaculis, maximus 
+mauris blandit, vulputate ex. Interdum et malesuada fames ac ante 
+ipsum primis in faucibus. Phasellus volutpat turpis non elementum 
+egestas.</p>
+</blockquote>
+
+<h2 id="hello-python-world">Hello Python World</h2>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&quot;hello&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">])</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">hello</span><span class="p">(</span><span class="s">&quot;world!&quot;</span><span class="p">)</span></code></pre></div>
+
+]]>
+		</content>
+    </entry>
+
+</feed>
