@@ -33,7 +33,7 @@ Thanks to Michael Lanyon for [tags alphabetizing code](http://blog.lanyonm.org/a
 This software is licensed as described in the file `LICENSE.markdown`, 
 which You should have received as part of this distribution. The terms 
 are also available at 
-<https://github.com/gynter/gynter.github.io/blob/master/LICENSE.markdown>.
+<https://github.com/gynter/gynter.github.io/blob/source/LICENSE.markdown>.
 
 4. Building on *nix
 -------------------
