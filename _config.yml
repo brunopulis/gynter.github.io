@@ -12,15 +12,17 @@ collections:
 # Handling reading.
 exclude:
   - .bundle
-  - .gitignore
   - .sass-cache
-  - CHANGELOG.md
   - CNAME
   - Gemfile
   - Gemfile.lock
-  - README.md
-  - LICENSE.md
+  - README.markdown
+  - LICENSE.markdown
+  - Makefile
   - vendor
+include:
+  - .gitignore
+  - .nojekyll
 encoding:       utf-8
 markdown_ext:   markdown,mkdown,mkdn,mkd,md
 textile_ext:    textile
