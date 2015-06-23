@@ -5,7 +5,7 @@ title: Minust
 permalink: /minust/
 ---
 
-Tere, minu nimi on Günter Kits. Olen serveriadministraator, 
+Tere, minu nimi on Günter Kits. Olen süsteemiadministraator, 
 tarkvaraarendaja ja vabatarkvara entusiast.
 
 Rohkem infot minu ja koostööprojektide kohta on võimalik leida mu 
