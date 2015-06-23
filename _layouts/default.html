@@ -1,3 +1,5 @@
+{% assign i18n = site.data.i18n.translations[page.language] %}
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,7 +9,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
         <title>{{ page.title_prefix }} - {{ page.title }}</title>
-        {% if page.description %}
+        {% if i18n.description %}
+            <meta name="description" content="{{ i18n.description }}">
+        {% else if page.description %}
             <meta name="description" content="{{ page.description }}">
         {% endif %}
         <meta name="author" content="{{ page.author }}">
@@ -22,9 +26,9 @@
         <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | prepend: site.baseurl }}">
 
         {% if page.feed == 'rss2' %}
-            <link rel="alternate" type="application/rss+xml" title="{{ page.title_prefix }} RSS feed" href="{{ '/feed/rss2/' | prepend: site.baseurl }}">
+            <link rel="alternate" type="application/rss+xml" title="{{ page.title_prefix }} RSS {{ i18n.news_feed }}" href="{{ '/feed/rss2/' | prepend: site.baseurl }}">
         {% elsif page.feed == 'atom' %}
-            <link rel="alternate" type="application/atom+xml" title="{{ page.title_prefix }} Atom feed" href="{{ '/feed/atom/' | prepend: site.baseurl }}" />
+            <link rel="alternate" type="application/atom+xml" title="{{ page.title_prefix }} Atom {{ i18n.news_feed }}" href="{{ '/feed/atom/' | prepend: site.baseurl }}" />
         {% endif %}
 	</head>
 
@@ -50,13 +54,13 @@
                     <li><a class="navbar-toggle fa fa-arrow-up fa-lg" href="#pagetop"> </a></li>
                     <li><a class="navbar-toggle fa fa-rss fa-lg" target="_blank" href="{{ '/' | prepend: page.feed | prepend: '/feed/' | prepend: site.baseurl }}"> </a></li>
                     {% if site.categories != empty %}
-                        <li><a class="navbar-toggle fa fa-folder-open fa-lg" href="{{ '/categories/' | prepend: site.baseurl }}"> </a></li>
+                        <li><a class="navbar-toggle fa fa-folder-open fa-lg" href="{{ i18n.categories_link | prepend: site.baseurl }}"> </a></li>
                     {% endif %}
                     {% if site.tags != empty %}
-                        <li><a class="navbar-toggle fa fa-tags fa-lg" href="{{ '/tags/' | prepend: site.baseurl }}"> </a></li>
+                        <li><a class="navbar-toggle fa fa-tags fa-lg" href="{{ i18n.tags_link | prepend: site.baseurl }}"> </a></li>
                     {% endif %}
                     {% if site.posts != empty %}
-                        <li><a class="navbar-toggle fa fa-archive fa-lg" href="{{ '/archive/' | prepend: site.baseurl }}"> </a></li>
+                        <li><a class="navbar-toggle fa fa-archive fa-lg" href="{{ i18n.archive_link | prepend: site.baseurl }}"> </a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -66,7 +70,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 text-center">
-                        &copy; {{ site.time | date: '%Y' }} {{ page.content_license }}
+                        &copy; {{ site.time | date: '%Y' }} {{ i18n.content_license }}
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ collections:
 
 # Handling reading.
 exclude:
+  - .bundle
   - .gitignore
   - .sass-cache
   - CHANGELOG.md
@@ -19,6 +20,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - LICENSE.md
+  - vendor
 encoding:       utf-8
 markdown_ext:   markdown,mkdown,mkdn,mkd,md
 textile_ext:    textile
@@ -41,7 +43,16 @@ url:        "http://kyber.kits.ee"
 # Outputting.
 permalink:          pretty
 paginate:           3
-paginate_path:      page:num
+paginate_path:
+  - en/page:num
+  - et/leht:num
+paginate_filter:
+  - name: language
+    value: "en_US"
+  - name: language
+    value:
+      - "et_EE"
+      - "en_US"
 paginator_offset:   2
 timezone:           UTC
 
@@ -57,14 +68,12 @@ defaults:
       title_prefix: kyberkits
       # Page title.
       title: Home
-      # Short description of the page.
-      description: Günter's homepage
       # Author for pages and posts.
-      author: "Günter Kits"
+      author: Günter Kits
       # Contact e-mail for pages and posts.
       email: kyber@kits.ee
-      # Page/post content license (can contain HTML).
-      content_license: This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      # Default language.
+      language: en_US
       # Preferred feed standard. Possible values are: atom, rss or null.
       # If set to null then no feed links are present, but feeds can
       # still be accessed directly via /feed/atom or /feed/rss.

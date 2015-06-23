@@ -1,15 +1,15 @@
-<div id="masthead">  
+<div id="masthead">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
-                <h1><a href="{{ '/' | prepend: site.baseurl }}">#!/bin/kyberkits</a><p class="lead">No one will hear you scream in the server room</p></h1>
+            <div class="col-md-7">
+                <h1><a href="{{ i18n.link | prepend: site.baseurl }}">#!/bin/kyberkits</a><p class="lead">{{ i18n.description }}</p></h1>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div id="about" class="panel panel-default collapse in">
                     <div class="panel-body">
                         <div class="col-xs-10">
-                            <p class="lead">Hello, my name is Günter!</p>
-                            I'm a musician, system administrator, software engineer, and open source software enthusiast from Estonia.
+                            <p class="lead">{{ i18n.profile.lead }}</p>
+                            {{ i18n.profile.content }}
                         </div>
                         <div class="col-xs-2">
                             <ul class="list-unstyled">

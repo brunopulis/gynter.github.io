@@ -115,3 +115,27 @@ footer {
         margin-bottom: 70px;
     }
 }
+
+.navbar-collapse .nav > .responsive-divider {
+    height: 30px;
+    margin: 5px 9px;
+    border-left: 1px solid #d9230f;
+}
+
+.navbar-inverse .responsive-divider {
+    border-left-color: #2e2f2f;
+}
+
+
+@media (max-width: 767px) {
+    .navbar-collapse .nav > .responsive-divider {
+        height: 1px;
+        margin: 5px 9px;
+        border-top: 1px solid #d9230f;
+    }
+
+    .navbar-inverse .responsive-divider {
+        border-top-color: #2e2f2f;
+    }
+}
+

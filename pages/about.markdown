@@ -4,8 +4,8 @@ title: About me
 permalink: /about/
 ---
 
-Hello, I'm Günter Kits, a system administrator, musician, and software 
-engineer based on Estonia.
+Hello, I'm Günter Kits, a system administrator, and a software engineer 
+based on Estonia.
 
 For more information about the projects I'm contributing to You can 
 check my [Github] and [Launchpad] pages.

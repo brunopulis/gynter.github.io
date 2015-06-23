@@ -1,8 +1,11 @@
-# Jekyll specific.
+# Jekyll and Ruby specific.
 .sass-cache
 _site/*
-Gemfile
 Gemfile.lock
+
+# Bundler related.
+.bundle
+vendor/bundle/
 
 # Github related.
 CNAME

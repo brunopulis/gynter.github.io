@@ -1,0 +1,33 @@
+---
+layout: page
+---
+
+{% for post in site.posts %}
+    {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+    {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+    {% if month != nmonth %}
+        {% if forloop.index != 1 %}</ul><hr />{% endif %}
+        <h4>
+            <span class="fa fa-archive fa-lg"></span> 
+            {% if page.language == "et_EE" %}
+                {% assign month = post.date | date: "%m" | plus:'0' %}
+                {% include ee_date_fullmonths.html %}
+                {{ post.date | date: "%Y" }}
+            {% else %}
+                {{ post.date | date: '%B %Y' }}
+            {% endif %}
+            </h4>
+        <ul class="list-unstyled">
+    {% endif %}
+    <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> - 
+        {% if page.language == "et_EE" %}
+            {% assign month = post.date | date: "%m" | plus:'0' %}
+            {{ post.date | date: "%d" }}.
+            {% include ee_date_fullmonths.html %}
+            {{ post.date | date: "%Y" }}
+        {% else %}
+            {{ post.date | date: "%B %-d, %Y" }}
+        {% endif %}
+    </li>
+{% endfor %}

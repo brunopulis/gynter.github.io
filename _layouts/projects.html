@@ -2,16 +2,19 @@
 layout: page
 ---
 
+{% assign i18n = site.data.i18n.translations[page.language] %}
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
-            <h2><span class="fa fa-code fa-lg"></span> My projects</h2>
+            <h2><span class="fa fa-code fa-lg"></span> {{ i18n.my_projects }}</h2>
         </div>
     </div>
 
     <div class="row">
         {% for project in site.projects %}
-            {% if project.category == "maintainer" %}
+            {% assign project_url = project.url | split: '/' %}
+            {% if project.category == "maintainer" and project_url[2] == page.language %}
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -31,13 +34,14 @@ layout: page
 
     <div class="row">
         <div class="col-xs-12">
-            <h2><span class="fa fa-code-fork fa-lg"></span> Projects contributed to</h2>
+            <h2><span class="fa fa-code-fork fa-lg"></span> {{ i18n.contributed_projects }}</h2>
         </div>
     </div>
 
     <div class="row">
         {% for project in site.projects %}
-            {% if project.category == "contributor" %}
+            {% assign project_url = project.url | split: '/' %}
+            {% if project.category == "contributor" and project_url[2] == page.language %}
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">

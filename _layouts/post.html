@@ -2,15 +2,24 @@
 layout: default
 ---
 
+{% assign i18n = site.data.i18n.translations[page.language] %}
+
 <hr class="heading-divider" />
 <h3 class="text-center">
     <a href="{{ post.url | prepend: site.baseurl }}">{{ page.title }}</a><br />
     <small>
-        {{ page.date | date: "%B %-d, %Y" }}
+        {% if page.language == "et_EE" %}
+            {% assign month = page.date | date: "%m" | plus:'0' %}
+            {{ page.date | date: "%d" }}.
+            {% include ee_date_fullmonths.html %}
+            {{ page.date | date: "%Y" }}
+        {% else %}
+            {{ page.date | date: "%B %-d, %Y" }}
+        {% endif %}
         {% if page.tags != empty %}<br />
             <i class="fa fa-tags"></i>
             {% for tag in page.tags %}
-                <a href="{{ '-ref' | prepend: tag | replace: ' ','-' | prepend: '/tags/#' | prepend: site.baseurl }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                <a href="{{ '-ref' | prepend: tag | replace: ' ','-' | prepend: '#' | prepend: i18n.tags_link | prepend: site.baseurl }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
             {% endfor %}
         {% endif %}
     </small>

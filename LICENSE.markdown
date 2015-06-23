@@ -15,12 +15,13 @@ This work is distributed under the Expat License. Please read through
 the paragraph "Expat License" for more information about our license.
 
 The content which is distributed with this work and is located in the 
-directories "media", "pages", "_posts" and/or in one or more 
-subdirectories under those directories is licensed under a Creative 
-Commons Attribution-ShareAlike 4.0 International Public License, if not 
-specified otherwise in the content or content metadata. Please read 
-through the paragraph "Creative Commons Attribution-ShareAlike 4.0 
-International Public License" for more information.
+directories "media", "pages", "_posts", "_projects" and/or in one or 
+more subdirectories under those directories is licensed under a 
+Creative Commons Attribution-ShareAlike 4.0 International Public 
+License, if not specified otherwise in the content or content metadata. 
+Please read through the paragraph "Creative Commons 
+Attribution-ShareAlike 4.0 International Public License" for more 
+information.
 
 Expat License
 -------------

@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% assign i18n = site.data.i18n.translations[page.language] %}
+
 <hr class="heading-divider" />
 <h3 class="text-center">
     <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a><br />

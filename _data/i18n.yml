@@ -1,0 +1,49 @@
+languages:
+- en_US
+- et_EE
+
+translations:
+    en_US:
+        name: English
+        link: /en/
+        archive_link: /archive/
+        tags_link: /tags/
+        categories_link: /categories/
+        description: Your screams won't be heard in the server room
+        navbar:
+          - name: About me
+            link: /about/
+          - name: Projects
+            link: /projects/
+        profile:
+            lead: Hello, my name is Günter!
+            content: I'm a system administrator, software engineer, and open source software enthusiast from Estonia.
+        toggle_navigation: Toggle navigation
+        who_am_i: Who am I ?
+        posts_archive: Posts archive
+        my_projects: My projects
+        contributed_projects: Projects contributed to
+        news_feed: feed
+        content_license: This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    et_EE:
+        name: Eesti
+        link: /
+        archive_link: /arhiiv/
+        tags_link: /sildid/
+        categories_link: /kategooriad/
+        description: Serveriruumis su karjeid ei kuulda
+        navbar:
+          - name: Minust
+            link: /minust/
+          - name: Projektid
+            link: /projektid/
+        profile:
+            lead: Tere, minu nimi on Günter!
+            content: Ma olen süsteemiadministraator, tarkvaraarendaja ja vabatarkvara entusiast.
+        toggle_navigation: Menüü
+        who_am_i: Kes ma olen ?
+        posts_archive: Postituste arhiiv
+        my_projects: Minu projektid
+        contributed_projects: Koostööprojektid
+        news_feed: uudisvoog
+        content_license: Käesolev töö on litsentseeritud <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> litsentsiga.
