@@ -22,8 +22,6 @@ It is based on a work "Simplex" created by Thomas Park
 Skelly at Bootply.com.
 
 The Jekyll configuration is defined and documented in `_config.yml`. 
-Some parts of the web like navigation menu (`_includes/navbar.html`) 
-are hardcoded into the template.
 
 Thanks to Michael Lanyon for [tags alphabetizing code](http://blog.lanyonm.org/articles/2013/11/21/alphabetize-jekyll-page-tags-pure-liquid.html).
 
