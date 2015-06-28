@@ -11,26 +11,7 @@ layout: page
         </div>
     </div>
 
-    <div class="row">
-        {% for project in site.projects %}
-            {% assign project_url = project.url | split: '/' %}
-            {% if project.category == "maintainer" and project_url[2] == page.language %}
-            <div class="col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4>
-                            {{ project.title }}
-                            <a href="{{ project.link }}" target="_blank"><i class="fa fa-external-link pull-right"></i></a>
-                        </h4>
-                    </div>
-                    <div class="panel-body">
-                        {{ project.content }}
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+    {% include project_category.html category="maintainer" %}
 
     <div class="row">
         <div class="col-xs-12">
@@ -38,24 +19,5 @@ layout: page
         </div>
     </div>
 
-    <div class="row">
-        {% for project in site.projects %}
-            {% assign project_url = project.url | split: '/' %}
-            {% if project.category == "contributor" and project_url[2] == page.language %}
-            <div class="col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4>
-                            {{ project.title }}
-                            <a href="{{ project.link }}" target="_blank"><i class="fa fa-external-link pull-right"></i></a>
-                        </h4>
-                    </div>
-                    <div class="panel-body">
-                        {{ project.content }}
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+    {% include project_category.html category="contributor" %}
 </div>
