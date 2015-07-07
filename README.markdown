@@ -33,7 +33,7 @@ which You should have received as part of this distribution. The terms
 are also available at 
 <https://github.com/gynter/gynter.github.io/blob/source/LICENSE.markdown>.
 
-4. Building on *nix
+3. Building on *nix
 -------------------
 
 Building dependencies: 
